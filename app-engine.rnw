@@ -1,2 +1,0 @@
-11 
-    de.renew.gui.CPNDrawing 0 NULL  307 186 726 600 

@@ -1,0 +1,43 @@
+#!/bin/bash
+for exp in 2 3 5 6
+do
+    echo "Running experiment $exp"
+    ./renew-exp shadow-nets/experiments.sns physical-layer-exp-"$exp"
+    mv ../simulation.log $exp
+    cd $exp
+    echo "Processing output from experiment $exp"
+    for data in  `cat simulation.log | grep -F 'appspec1' | grep FinalPlace | grep Putting | cut -d ',' -f 2`
+    do
+        start=`cat simulation.log  | grep InitialPlace | grep Putting | grep -F $data | cut -d '(' -f 5 | cut -d ')' -f 1`
+        end=`cat simulation.log | grep 'FinalPlace' | grep Putting | grep -F $data | cut -d '(' -f 5 | cut -d ')' -f 1`
+        yaxis=`echo "($end - $start)/1000" | bc -l`
+        xaxis=`cat simulation.log  | grep InitialPlace | grep Putting | grep -F $data | cut -d '(' -f 6 | cut -d ')' -f 1`
+        echo $xaxis $yaxis >> f.dat
+    done
+
+    for data in  `cat simulation.log | grep -F 'appspec2' | grep FinalPlace | grep Putting | cut -d ',' -f 2`
+    do
+        start=`cat simulation.log  | grep InitialPlace | grep Putting | grep -F $data | cut -d '(' -f 5 | cut -d ')' -f 1`
+        end=`cat simulation.log | grep 'FinalPlace' | grep Putting | grep -F $data | cut -d '(' -f 5 | cut -d ')' -f 1`
+        yaxis=`echo "($end - $start)/1000" | bc -l`
+        xaxis=`cat simulation.log  | grep InitialPlace | grep Putting | grep -F $data | cut -d '(' -f 6 | cut -d ')' -f 1`
+        echo $xaxis $yaxis >> g.dat
+    done
+    cd ..
+done
+
+gnuplot -persist <<-EOFMarker
+    set   autoscale                        # scale axes automatically
+    set xtic auto                          # set xtics automatically
+    set ytic auto                          # set ytics automatically
+    set xlabel "Execution Timeline (seconds)"
+    set ylabel "End-to-end Latency (seconds)"
+    set terminal pdf
+    set output 'experiments.pdf'
+    plot "2/f.dat" using 1:2 title 'exp 1, 5 resources, with keep alive, low warm up time' w linespoints,\
+        "3/f.dat" using 1:2 title 'exp 2, 5 resources, with keep alive, high warm up time' w linespoints,\
+        "5/f.dat" using 1:2 title 'exp 3, 2 resources, no keep alive, low warm up time' w linespoints,\
+        "6/f.dat" using 1:2 title 'exp 4, 2 resources, no keep alive, high warm up time' w linespoints
+EOFMarker
+
+

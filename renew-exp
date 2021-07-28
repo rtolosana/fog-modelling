@@ -1,0 +1,43 @@
+#!/bin/sh
+# search for loader.jar in dist directory
+if test ! -r "renew2.5.1/loader.jar"
+then
+  echo cannot find loader.jar in dist directory!
+  exit
+fi
+
+# set CLASSPATH
+if test "$CLASSPATH" != ""
+then
+  CP="$CLASSPATH"
+else
+  CP=.
+fi
+
+# set NETPATH
+NETPATH="shadow-nets"
+NP=.
+if test "$NETPATH" != ""
+then
+  NP="$NETPATH"
+fi
+
+# find java command
+JAVACMD=java
+if test "$JAVA_HOME" != ""
+then
+  if test -x "$JAVA_HOME/bin/java"
+  then
+    JAVACMD="$JAVA_HOME/bin/java"
+  fi
+fi
+
+# start renew gui
+echo "JAVA COMMAND: $JAVACMD"
+echo "CLASSPATH: $CP"
+echo "NETPATH: $NP"
+$JAVACMD -Xmx200M \
+         -Dde.renew.netPath="$NP" \
+         -Dde.renew.classPath="$CP" \
+         -jar "renew2.5.1/loader.jar" \
+         startsimulation "$@" 

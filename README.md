@@ -23,7 +23,7 @@ on choosing function granularity, data size and cost. The Petri net models beco
 
 # Code Description
 
-# Installation Steps
+# Installation & Execution Steps
   1. Make sure Docker is installed in your system
   2. Download / clone the code from github
   3. Build the container:

@@ -21,6 +21,8 @@ on choosing function granularity, data size and cost. The Petri net models beco
 # Software Requirements
   - Any Linux operating system to run an Ubuntu based Dockerfile
 
+# Code Description
+
 # Installation Steps
   1. Make sure Docker is installed in your system
   2. Download the code from github

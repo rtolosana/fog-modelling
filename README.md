@@ -38,3 +38,5 @@ chmod u+x docker-run.sh
 ```
 docker-run.sh
 ```
+# Results from the Reproducibility
+After installing and executing the experiments, a graph in pdf format will be obtained in the execution directory which includes the experiments (last figure) that appear on the paper.

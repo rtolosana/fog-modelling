@@ -39,4 +39,4 @@ chmod u+x docker-run.sh
 docker-run.sh
 ```
 # Results from the Reproducibility
-After installing and executing the experiments, the whole set of experiments that appear in the paper will be reproduced. A graph in pdf format will be obtained in the execution directory which matches the experiments in the last figure of the paper.
+After installing and executing the experiments, the whole set of experiments that appear in the paper will be reproduced. The output of the experiments is a graph in pdf format, a file named experiments.pdf will be obtained in the execution directory which matches the experiments in the last figure of the paper.

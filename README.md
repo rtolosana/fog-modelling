@@ -32,9 +32,9 @@ docker build . -t fog_modelling
 ```
   4. Grant execution permissions to the run_docker.sh script:
 ```
-chmod u+x run_docker.sh
+chmod u+x docker-run.sh
 ```
   5. Run the container with the run_docker script provided: 
 ```
-run_docker.sh
+docker-run.sh
 ```

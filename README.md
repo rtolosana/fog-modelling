@@ -1,13 +1,13 @@
-# Title: 
+# Title
 Reproducibility Code for the paper "Modeling Serverless Function Behaviours", published in the GECON21 conference (http://2021.gecon-conference.org/).
 
-# Authors:
+# Authors
   - Rafael Tolosana-Calasanz
   - Gabriel G. Castañé
   - José Á. Bañares
   - Omer F. Rana
 
-# Description:
+# Description
 Reproducibility Code for the paper "Modeling Serverless Function Behaviours"
 
 This code implements a simulator for serverless computing for the conference paper "Modeling Serverless Function Behaviours". The serverless computing model extends potential deployment options for cloud applications, by allowing users to focus on building and deploying their code without needing to configure or manage the underlying computational resources. Cost and latency constraints in stream processing user applications often push computations closer to the sources of data, leading to challenges for dynamically distributing stream operators across the edge/ fog/ cloud heterogeneous nodes and the routing of data flows. Various approaches to support operator placement across edge and cloud resources and data routing are beginning to be addressed through the serverless model. Understanding how stream processing operators can be mapped into serverless functions also offers cost incentives for users – as charging is now on a subsecond basis (rather than hourly).

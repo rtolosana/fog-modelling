@@ -10,7 +10,7 @@ A dynamic Petri net model of serverless functions is proposed in this work, whi
 on choosing function granularity, data size and cost. The Petri net models become interpretable / executable through the Renew interpreter. The code is made available inside a Dockerfile (based on Ubuntu), with all the required dependencies to support the reproducibility of experiments.
 
 # Hardware Requirements
-  - No particular hardware requirement
+  - No particular hardware requirements
 
 # Software Requirements
   - Any Linux operating system to run an Ubuntu based Dockerfile

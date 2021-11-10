@@ -17,5 +17,3 @@ RUN mkdir -p 5
 RUN mkdir -p 6
 
 CMD ./simulation-experiments
-
-

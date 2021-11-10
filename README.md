@@ -1,6 +1,12 @@
 # Title: 
 Reproducibility Code for the paper "Modeling Serverless Function Behaviours", published in the GECON21 conference (http://2021.gecon-conference.org/).
 
+# Authors:
+  - Rafael Tolosana-Calasanz
+  - Gabriel G. Castañé
+  - José Á. Bañares
+  - Omer F. Rana
+
 # Description:
 Reproducibility Code for the paper "Modeling Serverless Function Behaviours"
 

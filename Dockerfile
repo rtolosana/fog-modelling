@@ -1,8 +1,7 @@
 FROM ubuntu
 RUN apt-get -qq update && apt-get -qq install --no-install-recommends -y unzip gnuplot bc openjdk-11-jdk wget\
     && rm -rf /var/lib/apt/lists/*
-RUN mkdir output
-WORKDIR /output
+WORKDIR /results
 RUN wget http://www.informatik.uni-hamburg.de/TGI/renew/2.5.1/renew2.5.1base.zip
 RUN unzip renew2.5.1base.zip
 RUN rm renew2.5.1base.zip

@@ -40,4 +40,4 @@ gnuplot -persist <<-EOFMarker
         "6/f.dat" using 1:2 title 'exp 4, 2 resources, no keep alive, high warm up time' w linespoints
 EOFMarker
 
-
+mv experiments.pdf /results

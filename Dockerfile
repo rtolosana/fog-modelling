@@ -6,8 +6,8 @@ RUN mkdir /experiments
 COPY shadow-nets/ /experiments/shadow-nets
 COPY renew-exp /experiments
 COPY simulation-experiments /experiments
-RUN chmod u+x renew-exp
-RUN chmod u+x simulation-experiments
+RUN chmod u+x /experiments/renew-exp
+RUN chmod u+x /experiments/simulation-experiments
 RUN mkdir -p /experiments/2
 RUN mkdir -p /experiments/3
 RUN mkdir -p /experiments/5

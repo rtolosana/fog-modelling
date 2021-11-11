@@ -24,6 +24,14 @@ on choosing function granularity, data size and cost. The Petri net models beco
   - Any Linux operating system to run an Ubuntu based Dockerfile
 
 # Code Description
++ Reference-nets-models: contains the Reference nets used to conduct the experiments
++ shadow-nets: this represents the non-gui version of the Reference-nets-models so that the simulation execution time can be speed up (only performance reasons)
++ timed-Reference-nets: this represents the models as described in the paper
++ Dockerfile: the actual container spec
++ docker-run.sh: script to run the container and, hence, to run the reproducibility experiments
++ log4j.properties: property file for the Renew interpreter so that the simulation log is properly configured and the simulation results can be gathered
++ renew-exp: this script runs 1 experiment
++ simulation-experiments: this script runs the whole set of experiments in the paper (it invokes renew-exp)
 
 # Installation & Execution Steps
   1. Make sure Docker is installed in your system

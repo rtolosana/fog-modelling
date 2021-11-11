@@ -38,7 +38,7 @@ chmod u+x docker-run.sh
 ```
 docker-run.sh
 ```
-# Results from the Reproducibility
-After installing and executing the experiments, the whole set of experiments that appear in the paper will be reproduced. The output of the experiments is a graph in pdf format, a file named [experiments.pdf](https://github.com/rtolosana/fog-modelling/files/7516906/experiments.pdf) will be obtained in the execution directory which matches the experiments in the last figure of the paper.
+# Results from the Reproducibility Experiments
+After installing and executing the experiments, **the whole set of experiments** that appear in the paper will be reproduced. The output of the experiments is a graph in pdf format, a file named [experiments.pdf](https://github.com/rtolosana/fog-modelling/files/7516906/experiments.pdf) will be obtained in the execution directory which matches the experiments in the last figure of the paper.
 
 ![experiments](https://user-images.githubusercontent.com/36404195/141219151-afe661bd-6926-4da5-99f7-d072b793cdee.gif)
